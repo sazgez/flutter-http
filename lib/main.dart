@@ -1,3 +1,5 @@
+import 'package:airqualityapp/data/data.dart';
+import 'package:airqualityapp/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,15 +14,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: Scaffold(
-        body: Center(
-          child: Text(DateTime.now().millisecondsSinceEpoch.toString()),
-        ),
+      home: FutureBuilder(
+        future: fetchData(),
+        builder: (context, snapshot) => snapshot.hasData
+            ? HomeScreen(airQuality: snapshot.data!)
+            : const Center(
+                child: CircularProgressIndicator(),
+              ),
       ),
     );
   }

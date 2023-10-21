@@ -5,6 +5,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 
 Future<AirQuality?> fetchData() async {
+  // ----------------- Location / Position ------------------- //
   try {
     bool serviceEnabled;
     LocationPermission permission;
@@ -29,7 +30,7 @@ Future<AirQuality?> fetchData() async {
 
     Position position = await Geolocator.getCurrentPosition();
 
-    // -------------------------------------- //
+    // ------------------------ API -------------------------- //
 
     var url = Uri.parse(
       'http://api.openweathermap.org/data/2.5/air_pollution?lat=${position.latitude}&lon=${position.longitude}&appid=$apiKey',
@@ -62,6 +63,11 @@ Future<AirQuality?> fetchData() async {
           break;
         default:
       }
+
+      print(airQuality);
+      return airQuality;
+    } else {
+      return null;
     }
   } catch (e) {
     log(e.toString());
