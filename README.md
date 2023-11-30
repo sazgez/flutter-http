@@ -1,16 +1,8 @@
-# airqualityapp
+# Air Quality App
 
-A new Flutter project.
+| **Example** |
+| --- |
+| ![homescreen](https://github.com/sazgez/flutter-air-quality/assets/95165061/57959240-88c9-4a10-a117-00da97bcf645) |
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## References
+- [Romain Girou's YouTube Tutorial](https://youtu.be/68aGwXt2OfY?si=nsqxevmsDYoeu9cM)
