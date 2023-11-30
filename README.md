@@ -6,3 +6,4 @@
 
 ## References
 - [Romain Girou's YouTube Tutorial](https://youtu.be/68aGwXt2OfY?si=nsqxevmsDYoeu9cM)
+- [Provided API](https://openweathermap.org/api/air-pollution)
